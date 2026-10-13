@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Labirinto Relâmpago</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<section id="menu" class="screen">
+  <div class="lw"><h1 class="logo">LABIRINTO<br>RELÂMPAGO</h1><span class="splash" id="splash"></span></div>
+  <button class="btn" data-a="play">Jogar</button>
+  <button class="btn" data-a="how">Como jogar</button>
+  <button class="btn" data-a="opts">Acessibilidade</button>
+  <button class="btn" data-a="scores">Recordes</button>
+</section>
+
+<section id="how" class="screen hidden">
+  <h2>Como jogar</h2>
+  <div class="panel">
+    <p>Chegue ao portal antes que o tempo acabe. São 8 fases. A partir da fase 3, pegue a chave para abrir o portal.</p>
+    <ul>
+      <li>Mover: setas ou WASD</li>
+      <li>Pausar: P ou Esc</li>
+      <li>Moeda: +10 pontos</li>
+      <li>Coração: +1 vida</li>
+      <li>Raio: mais velocidade</li>
+      <li>Chave: abre o portal</li>
+      <li>Relógio: +8 segundos</li>
+      <li>Espinhos e serras: perdem 1 vida</li>
+    </ul>
+    <p>Sobrou tempo? Vira bônus de pontos.</p>
+  </div>
+  <button class="btn" data-a="back">Voltar</button>
+</section>
+
+<section id="opts" class="screen hidden">
+  <h2>Acessibilidade</h2>
+  <div id="optList"></div>
+  <button class="btn" data-a="back">Voltar</button>
+</section>
+
+<section id="scores" class="screen hidden">
+  <h2>Recordes</h2>
+  <div class="panel" id="scoreList"></div>
+  <button class="btn" data-a="back">Voltar</button>
+</section>
+
+<section id="game" class="hidden" style="text-align:center">
+  <div id="hud">
+    <span id="hL" aria-label="Vidas"></span>
+    <span id="hLv"></span>
+    <span id="hC"></span>
+    <span id="hS"></span>
+    <button class="btn sm" id="bP">Pausar</button>
+  </div>
+  <div id="tb" role="progressbar" aria-label="Tempo restante" aria-valuemin="0"><i id="tf"></i><b id="tt"></b></div>
+  <div class="stage">
+    <canvas id="cv" role="img" aria-label="Labirinto do jogo. Use as setas para mover."></canvas>
+    <div id="ov" class="hidden"></div>
+  </div>
+  <div class="pad hidden" id="pad">
+    <button class="btn u" data-k="ArrowUp" aria-label="Cima">▲</button>
+    <button class="btn" data-k="ArrowLeft" aria-label="Esquerda" style="grid-column:1;grid-row:2">◀</button>
+    <button class="btn" data-k="ArrowDown" aria-label="Baixo" style="grid-column:2;grid-row:2">▼</button>
+    <button class="btn" data-k="ArrowRight" aria-label="Direita" style="grid-column:3;grid-row:2">▶</button>
+  </div>
+</section>
+</main>
+<div class="sr" id="live" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
