@@ -37,3 +37,7 @@ body.hc canvas{border-color:#fff}
 .pad .u{grid-column:2}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 body.calm *{animation:none!important;transition:none!important}
+ 
+.escola{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-bottom:.8rem}
+.escola img{width:min(40vw,150px);height:auto;display:block;filter:drop-shadow(0 0 14px #19d3ff77)}
+.turma{margin:.6rem 0 0;font-size:.9rem;font-weight:700;letter-spacing:.06em;color:#e8f4ff;text-align:center}

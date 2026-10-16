@@ -10,13 +10,17 @@
 <body>
 <main>
 <section id="menu" class="screen">
+  <div class="escola">
+    <img src="img setc 2/image-removebg-preview.png" alt="Colégio Estadual Barbosa Ferraz, 60 anos de história, Ivaiporã-PR" width="286" height="286">
+    <p class="turma">2° Desenvolvimento de Sistemas</p>
+  </div>
   <div class="lw"><h1 class="logo">LABIRINTO<br>RELÂMPAGO</h1><span class="splash" id="splash"></span></div>
   <button class="btn" data-a="play">Jogar</button>
   <button class="btn" data-a="how">Como jogar</button>
   <button class="btn" data-a="opts">Acessibilidade</button>
   <button class="btn" data-a="scores">Recordes</button>
 </section>
-
+ 
 <section id="how" class="screen hidden">
   <h2>Como jogar</h2>
   <div class="panel">
@@ -35,19 +39,19 @@
   </div>
   <button class="btn" data-a="back">Voltar</button>
 </section>
-
+ 
 <section id="opts" class="screen hidden">
   <h2>Acessibilidade</h2>
   <div id="optList"></div>
   <button class="btn" data-a="back">Voltar</button>
 </section>
-
+ 
 <section id="scores" class="screen hidden">
   <h2>Recordes</h2>
   <div class="panel" id="scoreList"></div>
   <button class="btn" data-a="back">Voltar</button>
 </section>
-
+ 
 <section id="game" class="hidden" style="text-align:center">
   <div id="hud">
     <span id="hL" aria-label="Vidas"></span>
@@ -70,7 +74,7 @@
 </section>
 </main>
 <div class="sr" id="live" aria-live="polite"></div>
-
+ 
 <script src="script.js"></script>
 </body>
 </html>
